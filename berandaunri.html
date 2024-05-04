@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .custom-bg {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.4s ease;
+        }
+
+        .custom-bg:hover {
+            transform: scale(1.05);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            transition: background-color 0.4s ease;
+        }
+
+        .overlay:hover {
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+        .menu-icon {
+            display: none;
+        }
+
+        .brandn {
+            font-size: 45px;
+            font-weight: 500;
+        }
+
+        .brandl {
+            width: 20%;
+        }
+
+        .abcdef {
+            display: none;
+        }
+
+        .abcde {
+            display: flex;
+        }
+
+        .edft {
+            margin-left: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .edft {
+                margin-left: 0px;
+            }
+
+            p,
+            a {
+                font-size: 10px;
+            }
+
+            #about2 {
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            .brandn {
+                font-size: 20px;
+            }
+
+            .abcdef {
+                display: block;
+            }
+
+            .abcde {
+                display: none;
+            }
+
+            .brandl {
+                width: 25%;
+            }
+
+            .navbar2 {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        @media (max-width: 426px) {
+            .brandn {
+                font-size: 14px;
+            }
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div class="video-container">
+        <video class="container-fluid" loop autoplay muted style=" z-index: -1;">
+
+            <source src="video.mp4" type="video/mp4">
+
+        </video>
+    </div>
+
+    <!-- <div class="container-fluid">
+        <div class="d-flex justify-content-center z-index: 1;position-relative">
+            <div id="navbrand" class="fs-1 position-absolute z-1" style="top: 3em;left: 2em; color: white;">
+                Universitas Riau</div>
+            <img id="logo" class="img-fluid position-absolute z-1" style="top: 3em;right: 4em; width: 10%;"
+                src="logo2.png" alt="LOGO UNRI">
+        </div>
+    </div> -->
+
+    <div
+        class="abcde py-5 w-100 align-items-center z-0 justify-content-around position-absolute z-0 top-50 start-50 translate-middle">
+        <div class="" style=" color: white;">
+            <p class="brandn w-auto">Universitas Riau</p>
+        </div>
+        <img class=" brandl" src="logo2.png" alt="LOGO UNRI">
+    </div>
+
+    <div
+        class="abcdef py-5 w-100 align-items-center justify-content-center position-absolute z-0 top-50 start-50 translate-middle">
+        <div class="text-center" style=" color: white;">
+            <img class=" brandl" src="logo2.png" alt="LOGO UNRI">
+            <p class="brandn w-auto">Universitas Riau</p>
+        </div>
+
+    </div>
+
+
+    <div class="navbar2 position-absolute container-fluid px-5 bottom-0">
+
+        <div class="nav d-flex container-fluid py-3 rounded-top-5 py-3 text-center d-flex align-content-center"
+            style="z-index: 1; color: black; background-color: white;">
+
+            <div class="col border-bottom rounded-pill px-1 pb-2"><a href="#">Portal</a></div>
+
+            <div class="col border-bottom rounded-pill px-1 pb-2"><a href="#">Kalender Akademik</a></div>
+
+            <div class="col border-bottom rounded-pill px-1 pb-2"><a href="#">Webmail</a></div>
+
+            <div class="col border-bottom rounded-pill px-1 pb-2"><a href="#">Blog Staff</a></div>
+
+            <div class="col border-bottom rounded-pill px-1 pb-2"><a href="#">Dokumen</a></div>
+
+            <div class="col border-bottom rounded-pill px-1 pb-2"><a href="#">Prestasi</a></div>
+
+            <div class="col border-bottom rounded-pill px-1 pb-2"><a href="#">PPID</a></div>
+
+            <div class="col border-bottom rounded-pill px-1 pb-2"><a href="#">PKKMB</a></div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class=" pb-2 pt-4 rounded-top-5 px-3 row d-flex nav-underline align-items-center justify-content-center "
+            style="color: black; background-color: white; ">
+            <div class="col shadow border rounded-3 py-3 mb-3 text-center">
+                <div class="fas fa-user-circle fa-xl"></div>
+                <div class="w-100"></div>
+                <a class="" href="#">12345</a>
+                <div class="w-100"></div><a class="" href="#">GURU BESAR</a>
+            </div>
+            <div class="col shadow border rounded-3 py-3 mb-3 text-center">
+                <div class="fa-solid fa-building fa-xl"></div>
+                <div class="w-100"></div>
+                <a class="" href="#">12345</a>
+                <div class="w-100"></div><a class="" href="#">FAKULTAS</a>
+            </div>
+            <div class="col shadow border rounded-3 py-3 mb-3  text-center">
+                <div class="fa-brands fa-leanpub fa-xl"></div>
+                <div class="w-100"></div>
+                <a class="" href="#">12345</a>
+                <div class="w-100"></div><a class="" href="#">DOSEN</a>
+            </div>
+            <div class="col shadow border rounded-3 py-3 mb-3 text-center">
+                <div class="fa-solid fa-id-card fa-xl"></div>
+                <div class="w-100"></div>
+                <a class="" href="#">12345</a>
+                <div class="w-100"></div><a class="" href="#">MAHASISWA</a>
+            </div>
+            <div class="col shadow border rounded-3 py-3 mb-3 text-center">
+                <div class="fab fa-trello fa-xl"></div>
+                <div class="w-100"></div>
+                <a class="" href="#">12345</a>
+                <div class="w-100"></div><a class="" href="#">PROGRAM STUDI</a>
+            </div>
+            <div class="col shadow border rounded-3 py-3 mb-3 text-center">
+                <div class="fa-solid fa-address-book fa-xl"></div>
+                <div class="w-100"></div>
+                <a class="" href="#">12345</a>
+                <div class="w-100"></div><a class="" href="#">TENAGA KEPENDIDIKAN</a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid sticky-top" style="background-color: white;">
+        <div id="header" class="px-3 py-3 d-flex justify-content-center text-center row"
+            style="background-color: white;">
+            <div class="justify-content-center align-items-center d-flex align-items-center nav-underline ">
+                <!-- Navigation links -->
+                <div class="col navbar2 nav-link "><a href="#">BERANDA</a></div>
+                <div class="col navbar2 nav-link "><a href="#">TENTANG UNRI</a></div>
+                <div class="col navbar2 nav-link "><a href="#">PENELITIAN</a></div>
+                <div class="col navbar2 nav-link "><a href="#">PENDIDIKAN</a></div>
+                <div class="col navbar2 nav-link "><a href="#">MAHASISWA</a></div>
+                <div class="col navbar2 nav-link "><a href="#">INTERNATIONAL</a></div>
+                <div class="col navbar2 nav-link "><a href="#">SISTEM INFORMASI</a></div>
+                <div class="col navbar2 nav-link"><a href="#">PENDAFTARAN</a></div>
+
+                <!-- Menu icon -->
+                <div class="menu-icon">
+                    <div class="justify-content-end d-flex">
+                        <div class="pe-3 navbar-brand">Universitas Riau</div>
+                        <button class="fa-solid fa-bars d-flex align-items-center btn btn-primary" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                            aria-expanded="false">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="navbarNav">
+                <ul class="navbar-nav pt-2">
+                    <li class="nav-item"><a class="nav-link" href="#">BERANDA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">TENTANG UNRI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">PENDIDIKAN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">PENELITIAN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">MAHASISWA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">INTERNATIONAL</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">SISTEM INFORMASI</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">PENDAFTARAN</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id="berita">
+
+        <div class="container-fluid pt-5">
+            <div class="mx-3 justify-content-center text-center row">
+                <div class="d-flex justify-content-start">
+
+                    <div class="me-2">Berita Terkini</div>
+
+                    <div class="m-auto flex-grow-1" style="height: 2px; background-color: black">
+                    </div>
+
+                </div>
+
+                <div class="pb-4 d-flex justify-content-start">
+
+                    <div class="me-2" style="padding: 1px; background-color: black;"></div>
+
+                    <a class="" href="#">Lihat Semua Berita</a>
+
+                </div>
+
+                <div class="row container-fluid p-3 text-center nav-underline">
+
+                    <div class="col shadow rounded-3" style="background-image: url(1.gif);background-size: cover;">
+
+                        <p class="text-center mt-5 pt-5 " style="color: white;">MARCH 22, 2024</p>
+
+                        <p style="color: white;">Sejarah Baru Bagi UNRI, 8 Mahasiswa Lolos Program Bergengsi Indonesian
+
+                            International
+
+                            Student Mobility Awards (IISMA)</p>
+
+                    </div>
+
+                    <div class="col shadow rounded-3">
+
+                        <img class="img-fluid" src="2.gif" alt="">
+
+                        <p class="text-center pt-3 ">MARCH 22, 2024</p>
+
+                        <p>Berkunjung ke UNRI, BI Riau Sampaikan Beasiswa</p>
+
+                    </div>
+
+                    <div class="col shadow rounded-3">
+
+                        <img class="img-fluid" src="3.jpg" alt="">
+
+                        <p class="text-center pt-3 ">MARCH 22, 2024</p>
+
+                        <p>UNRI Jalin Kerja Sama dengan Kadin Dumai</p>
+
+                    </div>
+                </div>
+                <div class="row container-fluid p-3 text-center nav-underline">
+
+                    <div class="col shadow rounded-3">
+
+                        <img class="img-fluid" src="4.gif" alt="">
+
+                        <p class="text-center pt-3 ">MARCH 22, 2024</p>
+
+                        <p>Rektor UNRI Jadi Saksi Pelantikan PJ. Sekda Provinsi Riau</p>
+
+                    </div>
+
+                    <div class="col shadow rounded-3">
+
+                        <img class="img-fluid" src="5.jpg" alt="">
+
+                        <p class="text-center pt-3">MARCH 22, 2024</p>
+
+                        <p>Optimalisasi Program Kerja Bidang Akademis dan Kemahasiswaan Untuk Akselerasi
+
+                            Capaian Kinerja Tahun 2025</p>
+
+                    </div>
+
+                    <div class="col shadow rounded-3" style="background-image: url(6.jpg);background-size: cover;">
+
+                        <p class="text-center mt-5 pt-5 " style="color: white;">MARCH 22, 2024</p>
+
+                        <p style="color: white;">Inovasi Tim Promeeg Universitas Riau Raih Runner Up Carbon Neutral
+                            Solution
+
+                            Anugrah
+
+                            Innovillage 2023</p>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section id="pengumuman">
+
+        <div class="container-fluid pt-5 mt-3">
+
+            <div class="mx-3 d-flex justify-content-center text-center row">
+                <div class="d-flex">
+
+                    <div class="me-2">Pengumuman</div>
+
+                    <div class="m-auto flex-grow-1" style="height: 2px; background-color: black">
+
+                    </div>
+                </div>
+
+                <div class="pb-4 d-flex text-center">
+
+                    <div class="me-2" style="padding: 1px; background-color: black;"></div>
+
+                    <a class="" href="#">Lihat Semua Pengumuman</a>
+
+                </div>
+
+
+
+
+                <div class="row container-fluid d-flex nav-underline">
+
+                    <a href="#" class="nav-link col shadow rounded-4 px-3 pt-3">
+
+                        <p class="text-center">JANUARY 31, 2024</p>
+
+                        <p>Hasil Evaluasi Daya Tampung Program Studi Yang Terdeteksi Kenaikan Anomali</p>
+
+                    </a>
+
+                    <a href="#" class="nav-link col shadow rounded-4 px-3 pt-3">
+
+                        <p class="text-center">JANUARY 3, 2024</p>
+
+                        <p>Pembayaran UKT/SPP Semester Genap tahun Akademik 2024/2024</p>
+
+                    </a>
+
+                    <a href="#" class="nav-link col shadow rounded-4 px-3 pt-3">
+
+                        <p class="text-center">DECEMBER 28, 2023</p>
+
+                        <p>Pengajuan Revisi UKT Mahasiswa Angkatan 2023 Pemegang KIP Kuliah yang Tidak Termasuk
+
+                            Penerima Beasiswa KIP Kuliah</p>
+
+                    </a>
+
+                    <a href="#" class="nav-link col shadow rounded-4 px-3 pt-3">
+
+                        <p class="text-center">DECEMBER 24, 2023</p>
+
+                        <p>Hasil Akhir Seleksi (Kelulusan) PPPK Kebutuhan Tenaga Teknis dan Tenaga Kesehatan
+
+                            Kemdikbudristek TA 2023</p>
+
+                    </a>
+
+                    <a href="#" class="nav-link col shadow rounded-4 px-3 pt-3">
+
+                        <p class="text-center">NOVEMBER 24, 2023</p>
+
+                        <p>Hasil SKD CPNS Kemdikbudristek TA 2023</p>
+
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="program">
+
+        <div class="container-fluid ">
+
+            <div class="d-flex text-center row border" style="margin-top: 80px;">
+
+                <div class="col py-5" style="background-color: #064420; color: white;">
+
+                    <div class="fas fa-user-alt fa-xl pb-5"></div>
+
+                    <div class="w-100"></div>
+
+                    <a class="" href="#">PROGRAM SARJANA</a>
+
+                    <div class="pt-2 w-100"></div>
+
+                    <p>Program sarjana bisa diikuti oleh lulusan SMA/SMK/MA/MAK, mempunyai beban studi 144-160 sks dan
+
+                        dapat ditempuh dalam waktu 8-14 semester.</p>
+
+                    <div class="border rounded-4 d-flex justify-content-center align-items-center pt-2">
+                        <p>Baca Selengkapnya</p>
+                    </div>
+
+                </div>
+
+                <div class="col pt-5" style=" background-color: #E4EFE7; color: #064420;">
+
+                    <div class="fas fa-users fa-xl pb-5"></div>
+
+                    <div class="w-100"></div>
+
+                    <a class="" href="#">PROGRAM PASCASARJANA</a>
+
+                    <div class="pt-2 w-100"></div>
+
+                    <p>UNRI menawarkan program studi lanjutan di tingkat S2 dan S3 yang diselenggarakan di fakultas
+
+                        serta
+
+                        sekolah Pascasarjana.</p>
+
+                    <div class="border rounded-4 d-flex justify-content-center align-items-center pt-2">
+                        <p>Baca Selengkapnya</p>
+                    </div>
+
+
+
+                </div>
+
+                <div class="col pt-5" style="background-color: #064420; color: #E4EFE7;">
+
+                    <div class="fas fa-street-view fa-xl pb-5"></div>
+
+                    <div class="w-100"></div>
+
+                    <a class="" href="#">PROGRAM PROFESI</a>
+
+                    <div class="pt-2 w-100"></div>
+
+                    <p>Program profesi diperuntukkan sebagai bagi lulusan program studi tertentu sebagai syarat
+                        untuk
+
+                        mendapatkan gelar keprofesian.</p>
+
+                    <div class="    border rounded-4 d-flex justify-content-center align-items-center pt-2">
+                        <p>Baca Selengkapnya</p>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </section>
+
+
+
+    <section id="about">
+
+        <div class="container-fluid justify-content-around">
+            <div class="row mt-5">
+                <!-- Section 1 -->
+                <div class="col-md-6 my-4">
+                    <div class="custom-bg" style="background-image:url('01.jpg'); height: 500px;">
+                        <div class="overlay p-5 align-items-center justify-content-center">
+                            <div class="title">Penelitian</div>
+                            <p>Sebagai Universitas Riset Berkelas Dunia, Universitas Riau memberikan perhatian khusus
+                                terhadap kegiatan-kegiatan penelitian serta mendorong dosen dan mahasiswa untuk
+                                melakukan dan mengembangkan berbagai penelitian yang berorientasi untuk memenuhi
+                                kebutuhan bangsa.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section 2 -->
+                <div class="col-md-6 my-4">
+                    <div class="custom-bg" style="background-image:url('02.jpg'); height: 500px;">
+                        <div class="overlay p-5 align-items-center justify-content-center">
+                            <div class="title">Pengabdian</div>
+                            <p>UNRI secara konsisten dan sistematik sejak tahun pendiriannya 1962 berjuang bersama
+                                rakyat hingga akar rumput membangun dan menyejahterakan Indonesia. UNRI terus mendorong
+                                peningkatan kuantitas dan kualitas pengabdian kepada masyarakat berbasis riset di
+                                Indonesia maupun di dunia Internasional dengan prinsip-prinsip pembangunan
+                                berkelanjutan. UNRI secara bertahap membangun kepemimpinan pengabdian kepada masyarakat
+                                di dunia internasional, antara lain untuk mendesiminasikan nilai-nilai baik
+                                keindonesiaan dan kemanusiaan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 my-4">
+                    <div class="custom-bg" style="background-image:url('03.jpg'); height: 500px;">
+                        <div class="overlay p-5 align-items-center justify-content-center">
+                            <div class="title">Tentang UNRI</div>
+                            <p>Turut mengahasilkan SDM yang unggul di tingkat pendidikan tinggi sejak 1962 baik di
+                                Provinsi Riau maupun Skala nasional. Meningkatkan dan memperkokoh daya saing SDM melalui
+                                tri dharma pergurauan tinggi: pendidikan & pengajaran, penelitian, dan pengabdian kepada
+                                masyarakat. Berkontribusi dalam memenuhi kebutuhan teknologi, menciptakan lapangan
+                                kerja, pertumbuhan ekonomi regional dan nasional. Menyediakan dan mengatur pendanaan
+                                bagi penyediaan sarana dan prasarana pendidikan serta penyelenggaraan pendidikan sesuai
+                                dengan standar dengan mutu terbaik.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-4">
+                    <div class="custom-bg" style="background-image:url('04.jpeg'); height: 500px;">
+                        <div class="overlay p-5 align-items-center justify-content-center">
+                            <div class="title">Kemahasiswaan</div>
+                            <p>Mencetak mahasiswa berwawasan global dan berintegritas yang dilandasi nilai-nilai
+                                Pancasila.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 my-4">
+                    <div class="custom-bg" style="background-image:url('05.jpg'); height: 500px;">
+                        <div class="overlay p-5 align-items-center justify-content-center">
+                            <div class="title">Alumni</div>
+                            <p>Alumni UNRI tersebar di berbagai wilayah, berkiprah di tingkat nasional dan global.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
+    <section id="others">
+
+        <div class="container-fluid pt-5 mt-3">
+
+            <div class="mx-3 d-flex justify-content-center text-center row">
+                <div class="d-flex text-center">
+
+                    <div style="width: 100%;height: 2px; background-color: black;"></div>
+
+                </div>
+
+                <div class="pb-4 d-flex text-center">
+
+                    <div style="padding: 1px;height: 25px; background-color: black;"></div>
+
+                </div>
+
+                <div class="row d-flex nav-underline" style="height: 400px;">
+
+                    <a href="#" class="nav-link col shadow rounded-4 px-3 pt-3"
+                        style="background-image:url(001.png); background-size: cover; opacity: 50%;">
+
+                    </a>
+
+                    <a href="#" class="nav-link col shadow rounded-4 px-3 pt-3"
+                        style="background-image:url(002.png); background-size: cover; opacity: 50%;">
+
+                    </a>
+
+                    <a href="#" class="nav-link col shadow rounded-4 px-3 pt-3"
+                        style="background-image:url(003.png); background-size: cover; opacity: 50%;">
+
+                    </a>
+
+                    <a href="#" class="nav-link col shadow rounded-4 px-3 pt-3"
+                        style="background-image:url(004.png); background-size: cover; opacity: 50%;">
+
+                        <a href="#" class="nav-link col shadow rounded-4 px-3 pt-3"
+                            style="background-image:url(005.jpeg); background-size: cover; opacity: 50%;">
+
+                        </a>
+
+                </div>
+
+                <div class="pt-4 d-flex justify-content-end">
+
+                    <div style="padding: 1px;height: 25px; background-color: black;"></div>
+
+                </div>
+
+                <div class="d-flex text-center">
+
+                    <div style="width: 100%;height: 2px; background-color: black;"></div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <div class="mt-5 container-fluid" style="background-color: #064420;">
+
+        <div class="py-5 justify-content-center text-center" style="color:#E4EFE7;">
+
+            <div class="nav d-flex align-items-center">
+
+                <div class="col d-flex flex-column align-items-center justify-content-center">
+
+                    <img class="img-fluid w-25" src="logo.png" alt="">
+
+                    <div class="pt-3 ">UNIVERSITAS RIAU</div>
+
+                </div>
+
+                <p class="col text-end pe-4">Kampus Bina Widya KM. 12,5, <br>Simpang Baru, <br>Kec. Tampan,
+
+                    <br>Kota
+
+                    Pekanbaru, <br>Riau <br>28293
+
+                </p>
+
+                <div class="col  rounded-5"
+                    style="background-image:url(map.png); background-size: cover; width: 100%; height: 200px;">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="container-fluid" style=" background-color: #E4EFE7; color: #064420;">
+        <div class="d-flex justify-content-center align-items-center row edft">
+            <p class="py-3 col">Copyright @ Universitas Riau</p>
+        </div>
+    </div>
+
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/0c93fe8e16.js" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>
